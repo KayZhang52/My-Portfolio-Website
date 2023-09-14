@@ -19,7 +19,7 @@ function SeoHeader() {
     .forEach((media) => {
       sameAs.push(media.link);
     });
-
+  console.log(socialMediaLinks);
   let mail = socialMediaLinks
     .find((media) => media.link.startsWith("mailto"))
     .link.substring("mailto:".length);
@@ -45,10 +45,10 @@ function SeoHeader() {
     email: mail,
     telephone: contactPageData.phoneSection?.subtitle,
     sameAs: sameAs,
-    jobTitle: job.title,
+    // jobTitle: job.title,
     worksFor: {
       "@type": "Organization",
-      name: job.company,
+      // name: job.company,
     },
     address: {
       "@type": "PostalAddress",
